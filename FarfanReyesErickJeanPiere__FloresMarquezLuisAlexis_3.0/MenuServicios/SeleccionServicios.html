@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Taller de Autos</title>
+    <link rel="stylesheet" href="/MenuServicios/SeleccionServicios.css">
+</head>
+<body>
+    <!-- Barra de Navegación -->
+    <nav>
+        <ul>
+            <li><a href="../MenuPrincipal.html">Inicio</a></li>
+            <li><a href="../MenuServicios.html">Servicios</a></li>
+            <li><a href="../Contacto.html">Contacto</a></li>
+            <li><a href="../Formulario.html">Formulario</a></li>
+        </ul>
+    </nav>
+
+
+    <div class="container">
+        <h1>Registro de Cliente</h1>
+
+        <!-- Datos del Cliente -->
+        <div class="input-section">
+            <h3>Datos Personales</h3>
+            <input type="text" id="nombreInput" placeholder="Nombre">
+            <input type="text" id="apellidoInput" placeholder="Apellidos">
+            <input type="text" id="dniInput" placeholder="DNI (8 dígitos)" maxlength="8">
+            <input type="text" id="numeroInput" placeholder="Número de contacto" maxlength="9">
+            <button onclick="guardarCliente()">Guardar Cliente</button>
+        </div>
+            <h3>Eliminar Cliente</h3>
+                <input type="text" id="dniEliminarInput" placeholder="Ingrese el DNI del cliente" maxlength="8">
+            <button onclick="BorrarCliente()">Eliminar Cliente</button>
+        </div>
+
+        <div class="input-section">
+            <h3>Buscar Cliente</h3>
+            <input type="text" id="dniBuscarInput" placeholder="Ingrese el DNI del cliente" maxlength="8">
+            <button onclick="buscarCliente()">Buscar Cliente</button>
+        </div>
+        
+        <!-- Aquí es donde se mostrarán los resultados de la búsqueda -->
+        <div class="result" id="resultadoBusqueda"></div>
+
+        <div class="result" id="resultado"></div>
+
+        <div class="array-display">
+            <h3>Registro Actual:</h3>
+            <div id="registro"></div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="text-content">
+            <a href="/MenuServicios/Boleta.html">
+                <button>Generar Boleta</button>
+            </a>
+        </div>
+    </div>
+
+    <script src="/MenuServicios/SeleccionServicios.js"></script>
+</body>
+</html>

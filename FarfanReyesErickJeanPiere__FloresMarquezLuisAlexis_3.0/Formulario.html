@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Formulario de servicio para taller de autos">
+    <meta name="keywords" content="taller, autos, servicio, formulario">
+    <title>Taller de Autos - Formulario de Servicio</title>
+    <link rel="stylesheet" href="Formulario.css"> <!-- Enlaza el CSS -->
+</head>
+<body>
+    <header>
+        <h1>Taller de Autos AutoFix</h1>
+    </header>
+
+    <!-- Barra de Navegación -->
+    <nav>
+        <ul>
+            <li><a href="../MenuPrincipal.html">Inicio</a></li>
+
+             <li><a href="../MenuServicios.html">Servicios</a></li>
+            
+            <li><a href="../Contacto.html">Contacto</a></li>
+
+            <li><a href="../Formulario.html">Encuesta</a></li>
+        </ul>
+    </nav>
+    <main>
+        <div class="main-container">
+            <div class="media-left">
+                <div class="images-row">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSUmNtiGvEQ2Bzo84X2bnzQkXLKt-sXtzLxGg&s" alt="Herramientas de Mecánica">
+                    <img src="https://img.freepik.com/foto-gratis/trabajador-servicio-coche-musculoso-reparando-vehiculo_146671-19605.jpg" alt="Reparación de Motor">
+                </div>
+                <iframe src="https://www.youtube.com/embed/g-cjCRKfu1U?si=IYzpwM3-sGj1IG_h" title="Video de Taller de Autos" allowfullscreen></iframe>
+            </div>
+
+            <div class="form-container">
+                <h2 id="inicio">Formulario de Servicio de Taller de Autos</h2>
+                <p>Complete el siguiente formulario para solicitar nuestros servicios.<br>
+                Nos pondremos en contacto con usted lo antes posible.</p>
+
+                <form action="#" method="post">
+                    <label for="nombre">Nombre completo:</label>
+                    <input type="text" id="nombre" name="nombre" required>
+
+                    <label for="email">Correo electrónico:</label>
+                    <input type="email" id="email" name="email" required>
+
+                    <label for="telefono">Teléfono:</label>
+                    <input type="tel" id="telefono" name="telefono" required>
+
+                    <label for="marca">Marca del vehículo:</label>
+                    <input type="text" id="marca" name="marca" required>
+
+                    <label for="modelo">Modelo del vehículo:</label>
+                    <input type="text" id="modelo" name="modelo" required>
+
+                    <label for="ano">Año del vehículo:</label>
+                    <input type="text" id="ano" name="ano" required>
+
+                    <label for="servicio">Tipo de servicio:</label>
+                    <select id="servicio" name="servicio" required>
+                        <option value="">Seleccione un servicio</option>
+                        <option value="mantenimiento">Mantenimiento de Frenos</option>
+                        <option value="cambio">Cambio de Aceite</option>
+                        <option value="pintura">Pintura General</option>
+                    </select>
+
+                    <label for="descripcion">Descripción del problema:</label>
+                    <textarea id="descripcion" name="descripcion" rows="4" required></textarea>
+
+                    <input type="submit" value="Enviar solicitud">
+                </form>
+
+                <h2>Mapa de nuestra ubicación</h2>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d12345.67890!2d-75.1234567!3d40.1234567!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNDDCsDA3JzI0LjQiTiA3NcKwMDcnMjQuNCJX!5e0!3m2!1sen!2sus!4v1234567890123" allowfullscreen="" loading="lazy"></iframe>
+            </div>
+
+            <div class="media-right">
+                <div class="images-row">
+                    <img src="https://d252jiv6n2ojdg.cloudfront.net/wp-content/uploads/2023/03/problemas-de-los-talleres-mecanicos.jpg" alt="Problemas de Talleres">
+                    <img src="https://servitechapp.com/wp-content/uploads/2023/03/taller.jpeg" alt="Taller">
+                </div>
+                <iframe src="https://www.youtube.com/embed/EDSTDHU6oFI?si=AE19WfgI_idtqJiK" title="Video de Taller de Autos" allowfullscreen></iframe>
+            </div>
+        </div>
+    </main>
+
+    <marquee>¡Promoción especial! 10% de descuento en servicios este mes.</marquee>
+
+    <footer>
+        <p>Contacto: <a href="tel:+1234567890">+1 (234) 567-890</a></p>
+    </footer>
+</body>
+</html>

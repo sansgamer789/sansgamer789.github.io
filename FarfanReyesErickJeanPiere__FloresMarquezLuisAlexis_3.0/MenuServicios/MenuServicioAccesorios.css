@@ -1,0 +1,151 @@
+/* Estilos generales */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #eceff1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+}
+
+/* Barra de Navegación */
+nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #4a148c;
+    display: flex;
+    justify-content: center;
+    padding: 10px 0;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+nav:hover {
+    background-color: #6a1b9a;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    padding: 0;
+}
+
+nav ul li {
+    margin: 0;
+}
+
+nav a {
+    display: inline-block;
+    width: 150px;
+    color: #fff;
+    padding: 15px;
+    text-align: center;
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+nav a:hover {
+    background-color: #7b1fa2;
+    border-radius: 5px;
+    transform: scale(1.05);
+}
+
+/* Header */
+header {
+    background-color: #333;
+    color: white;
+    padding: 20px;
+    margin: 35px -2px 0;
+    text-align: center;
+    border-radius: 0;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    width: calc(100% + 40px);
+    position: relative;
+}
+
+/* Estilo para la cuadrícula de imágenes */
+.image-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 columnas */
+    grid-template-rows: repeat(3, 1fr); /* 3 filas */
+    gap: 20px; /* Espacio entre imágenes */
+    justify-items: center; /* Centrar las imágenes */
+    margin-top: 20px;
+    width: 100%;
+}
+
+/* Contenedor de cada imagen (mantiene bordado morado alrededor de los cuadros) */
+.image-grid div {
+    width: 100%;
+    height: 0;
+    padding-bottom: 100%; /* Hace que la altura sea igual al ancho, creando un cuadrado */
+    position: relative;
+    overflow: hidden;
+    border: 2px solid #6a1b9a; /* Bordado morado */
+    border-radius: 8px; /* Bordes redondeados */
+}
+
+/* Estilo para cada imagen dentro de la cuadrícula */
+.image-grid img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%; /* Ajusta las imágenes para que ocupen todo el espacio del contenedor */
+    height: 100%;
+    object-fit: cover; /* Hace que las imágenes se recorten si es necesario, manteniendo la proporción */
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2); /* Sombra sutil */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.image-grid img:hover {
+    transform: scale(1.05); /* Efecto de zoom */
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3); /* Aumenta la sombra */
+}
+
+/* Estilo para los textos debajo de las imágenes */
+.image-grid div p {
+    position: absolute;
+    bottom: 10px; /* Asegura que el texto se quede en la parte inferior */
+    left: 50%;
+    transform: translateX(-50%); /* Centra el texto */
+    margin: 0;
+    font-size: 1rem;
+    color: #fff; /* El texto será blanco */
+    background-color: rgba(0, 0, 0, 0.5); /* Fondo oscuro semi-transparente para mejorar la visibilidad del texto */
+    width: 100%;
+    text-align: center;
+    padding: 5px 0;
+}
+
+/* Responsividad para dispositivos más pequeños */
+@media (max-width: 768px) {
+    .image-grid {
+        grid-template-columns: repeat(2, 1fr); /* 2 columnas en pantallas pequeñas */
+        grid-template-rows: repeat(4, 1fr); /* 4 filas */
+    }
+}
+
+@media (max-width: 480px) {
+    .image-grid {
+        grid-template-columns: 1fr; /* 1 columna en pantallas muy pequeñas */
+        grid-template-rows: repeat(7, 1fr); /* 7 filas */
+    }
+}
+
+/* Pie de página */
+footer {
+    text-align: center;
+    margin-top: 20px;
+}

@@ -1,0 +1,284 @@
+/* Menú de navegación */
+nav {
+    position: fixed;
+    top: 0; 
+    left: 0;
+    width: 100%;
+    background-color: #4a148c;
+    display: flex;
+    justify-content: center;
+    padding: 10px 0;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+nav:hover {
+    background-color: #6a1b9a;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    padding: 0;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav a {
+    color: #fff;
+    padding: 15px 25px;
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+nav a:hover {
+    background-color: #7b1fa2;
+    border-radius: 5px;
+    transform: scale(1.05);
+}
+
+/* Estilos generales */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Fuentes más modernas */
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #8d3ee7;
+    color: #333; /* Mejor contraste para el texto */
+}
+
+/* Contenedor principal */
+.container {
+    background-color: white;
+    padding: 25px;
+    border-radius: 10px; /* Bordes más suaves */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Sombra más sutil */
+    margin-top: 100px;
+    transition: box-shadow 0.3s ease; /* Efecto sutil al hacer hover */
+}
+
+.container:hover {
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+}
+
+/* Sección de entrada */
+.input-section {
+    margin: 20px 0;
+    padding: 18px;
+    border: 1px solid #e2e2e2;
+    border-radius: 6px;
+    background-color: #fafafa;
+    transition: border-color 0.3s ease;
+}
+
+.input-section:hover {
+    border-color: #4a148c; /* Resalta el borde al hacer hover */
+}
+
+/* Estilos de los botones */
+button {
+    padding: 12px 25px;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    margin: 8px 0;
+    font-size: 16px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+button:hover {
+    background-color: #218838;
+    transform: scale(1.05);
+}
+
+/* Resultados de la búsqueda */
+.result {
+    margin-top: 20px;
+    padding: 18px;
+    background-color: #e9f7ef;
+    color: #155724;
+    font-weight: bold;
+    border-radius: 6px;
+    text-align: center;
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1);
+}
+
+.result p {
+    margin: 0;
+    font-size: 16px;
+}
+
+/* Visualización del array */
+.array-display {
+    margin-top: 25px;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background-color: #f1f1f1;
+    transition: background-color 0.3s ease;
+}
+
+.array-display:hover {
+    background-color: #e9ecef; /* Efecto al hacer hover */
+}
+
+.array-display h3 {
+    margin-bottom: 15px;
+    font-size: 18px;
+    color: #333;
+}
+
+.array-display ul {
+    list-style: none;
+    padding: 0;
+}
+
+.array-display ul li {
+    padding: 8px;
+    border-bottom: 1px solid #ddd;
+    font-size: 16px;
+    color: #444;
+}
+
+.array-display ul li:last-child {
+    border-bottom: none;
+}
+
+/* Inputs */
+input[type="text"] {
+    width: calc(100% - 40px);
+    padding: 12px 20px;
+    margin: 10px 0;
+    border-radius: 6px;
+    border: 1px solid #ddd;
+    font-size: 16px;
+    background-color: #f8f9fa;
+    transition: border-color 0.3s ease;
+}
+
+input[type="text"]:focus {
+    border-color: #4a148c; /* Resalta al enfocar */
+    outline: none;
+}
+
+/* Transición para contenedores y elementos interactivos */
+input[type="text"], button, .array-display, .result {
+    transition: all 0.3s ease-in-out;
+}
+
+/* Barra deslizante para servicios */
+.services-container {
+    max-width: 100%;
+    padding: 20px;
+    background-color: #f4f4f9;
+    border-radius: 8px;
+    margin-top: 30px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.services-container h2 {
+    text-align: center;
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.services-list {
+    display: flex;
+    overflow-x: auto;
+    padding: 10px 0;
+    gap: 20px;
+}
+
+.service-item {
+    min-width: 300px;
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    flex-shrink: 0;
+    transition: transform 0.3s ease;
+}
+
+.service-item:hover {
+    transform: scale(1.05);
+}
+
+.service-item h3 {
+    font-size: 20px;
+    color: #4a148c;
+    margin-bottom: 15px;
+}
+
+.service-details p {
+    font-size: 16px;
+    color: #333;
+    margin: 5px 0;
+}
+
+@media (max-width: 768px) {
+    .services-list {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .service-item {
+        min-width: 250px;
+        margin-bottom: 15px;
+    }
+}
+
+/* Contenedor de cada servicio */
+.servicio-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.servicio-item label {
+    font-size: 16px;
+    font-weight: bold;
+    color: #333;
+    margin-right: 10px;
+    width: 180px; /* Ancho del label */
+}
+
+/* Estilo para el select (desplegable) */
+.servicio-item select {
+    padding: 8px 12px;
+    font-size: 14px;
+    border-radius: 6px;
+    border: 1px solid #ddd;
+    width: 200px; /* Ancho del select */
+    transition: border-color 0.3s ease;
+}
+
+/* Estilo para el campo de cantidad */
+.servicio-item input[type="number"] {
+    padding: 8px 12px;
+    font-size: 14px;
+    border-radius: 6px;
+    border: 1px solid #ddd;
+    margin-left: 10px; /* Espaciado entre el select y el input */
+    width: 80px; /* Ancho del campo de cantidad */
+    transition: border-color 0.3s ease;
+}
+
+/* Efecto al enfocar el select o input */
+.servicio-item select:focus, .servicio-item input[type="number"]:focus {
+    border-color: #4a148c;
+    outline: none;
+}
+
+/* Efecto hover en el select e input */
+.servicio-item select:hover, .servicio-item input[type="number"]:hover {
+    border-color: #4a148c;
+}

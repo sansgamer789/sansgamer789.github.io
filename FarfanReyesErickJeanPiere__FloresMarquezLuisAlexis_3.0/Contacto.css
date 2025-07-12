@@ -1,0 +1,206 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #000; /* Fondo negro */
+    color: #f4f4f4; /* Color del texto blanco */
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    width: 80%;
+    margin: auto;
+    overflow: hidden;
+}
+/* Menú de navegación */
+nav {
+    position: fixed;
+    top: 0; 
+    left: 0;
+    width: 100%;
+    background-color: #4a148c;
+    display: flex;
+    justify-content: center;
+    padding: 10px 0;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+nav:hover {
+    background-color: #6a1b9a;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    padding: 0;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav a {
+    color: #fff;
+    padding: 15px 25px;
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+nav a:hover {
+    background-color: #7b1fa2;
+    border-radius: 5px;
+    transform: scale(1.05);
+}
+#main-col {
+    background: #333; /* Fondo gris oscuro para el contenido */
+    padding: 20px;
+    margin-top: 85px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+    border-radius: 10px; /* Bordes redondeados */
+}
+
+/* Animación para el título */
+h2 {
+    color: #ffcc00; /* Título en amarillo */
+    text-align: center;
+    position: relative;
+    animation: moveToCenter 2s ease forwards; /* Animación para mover al centro */
+    opacity: 0;
+}
+
+/* Definición de la animación */
+@keyframes moveToCenter {
+    0% {
+        transform: translateX(-100%); /* Comienza fuera de la pantalla */
+        opacity: 0;
+    }
+    50% {
+        opacity: 0.5;
+    }
+    100% {
+        transform: translateX(0); /* Llega al centro */
+        opacity: 1;
+    }
+}
+
+.dark {
+    background: #444; /* Fondo más oscuro para el formulario */
+    padding: 20px;
+    border-radius: 10px;
+}
+
+form div {
+    margin-bottom: 10px;
+}
+
+label {
+    display: block;
+    color: #f4f4f4; /* Texto blanco */
+}
+
+input, textarea {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #555; /* Fondo gris para los campos */
+    color: #fff; /* Texto blanco */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Transición suave */
+}
+
+input:hover, textarea:hover {
+    transform: scale(1.05); /* Agrandar ligeramente */
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.3); /* Sombra al pasar el mouse */
+}
+
+button {
+    display: block;
+    width: 100%;
+    background-color: #e8491d;
+    color: white;
+    border: none;
+    padding: 10px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+button:hover {
+    background-color: #ff6a3c;
+    transform: scale(1.05); /* Agrandar el botón también */
+}
+
+.contact-links {
+    margin-top: 30px;
+    text-align: center;
+}
+
+/* Estilo para las imágenes pequeñas */
+.contact-links img {
+    width: 40px;
+    height: 40px;
+    display: block;
+    margin: 0 auto 5px auto; /* Centra la imagen sobre el botón */
+}
+
+.contact-links a {
+    display: inline-block;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    padding: 10px 15px;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+    text-align: center;
+}
+
+.contact-links a.claro {
+    background-color: #e8491d; /* Rojo para Claro */
+}
+
+.contact-links a.claro:hover {
+    background-color: #ff6a3c;
+}
+
+.contact-links a.entel {
+    background-color: #0073e6; /* Azul para Entel */
+}
+
+.contact-links a.entel:hover {
+    background-color: #005bb5;
+}
+
+.contact-links a.movistar {
+    background-color: #28a745; /* Verde para Movistar */
+}
+
+.contact-links a.movistar:hover {
+    background-color: #218838;
+}
+
+.contact-links a.whatsapp {
+    background-color: #25D366; /* Verde para WhatsApp */
+}
+
+.contact-links a.whatsapp:hover {
+    background-color: #22b158;
+}
+/* Responsividad: Ajustes en dispositivos pequeños */
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: row; /* Mantiene los enlaces en fila */
+        justify-content: space-between; /* Distribuye los enlaces de forma más equitativa */
+    }
+
+    nav a {
+        padding: 12px 10px;
+        font-size: 0.9em;
+    }
+}

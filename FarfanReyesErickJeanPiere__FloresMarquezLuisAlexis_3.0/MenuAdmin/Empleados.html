@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Taller Mecánico - Empleados</title>
+    <link rel="stylesheet" href="/MenuAdmin/Empleados.css">
+</head>
+<body>
+    <div class="row">
+        <div class="text-content">
+            <a href="/MenuPrincipal.html">
+                <button>Atras</button>
+            </a>
+        </div>
+    </div>
+    <h1>Taller de Autos "AutoCare Pro"</h1>
+    <form id="employeeForm">
+        <label for="name">Nombre:</label>
+        <input type="text" id="name" required>
+        <br>
+        <label for="lastName">Apellido:</label>
+        <input type="text" id="lastName" required>
+        <br>
+        <label for="dni">DNI:</label>
+        <input type="number" id="dni" required>
+        <br>
+        <label for="job">Trabajo:</label>
+        <select id="job">
+            <option value="mecanico">Mecánico</option>
+            <option value="electricista">Electricista</option>
+            <option value="pintor">Pintor</option>
+        </select>
+        <br><br>
+        <button type="button" onclick="addEmployee()">Agregar Empleado</button>
+    </form>
+
+    <h2>Lista de Empleados</h2>
+    <ul id="employeeList"></ul>
+
+    <!-- Modal -->
+    <div class="modal-overlay" id="modalOverlay"></div>
+    <div class="modal" id="modal">
+        <p id="modalContent"></p>
+        <button onclick="closeModal()">Cerrar</button>
+    </div>
+
+    <script src="/MenuAdmin/Empleados.js"></script>
+</body>
+</html>

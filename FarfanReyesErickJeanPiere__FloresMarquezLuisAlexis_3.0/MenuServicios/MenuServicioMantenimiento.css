@@ -1,0 +1,124 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #eceff1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+}
+
+header {
+    background-color: #333;
+    color: white;
+    padding: 20px;
+    margin: 35px -2px 0; /* Ajusta el margen lateral a negativo para extender */
+    text-align: center;
+    border-radius: 0; /* Sin bordes redondeados para ocupar toda la pantalla */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Sombra suave */
+    width: calc(100% + 40px); /* Aumenta el ancho total */
+    position: relative; /* Asegúrate de que no haya problemas de posición */
+}
+
+
+/* Menú de navegación */
+nav {
+    position: fixed;
+    top: 0; 
+    left: 0;
+    width: 100%;
+    background-color: #4a148c;
+    display: flex;
+    justify-content: center;
+    padding: 10px 0;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+nav:hover {
+    background-color: #6a1b9a;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    padding: 0;
+}
+
+nav ul li {
+    margin: 0; /* Eliminar margen para evitar desalineación */
+}
+
+/* Estilo para que todos los enlaces tengan el mismo tamaño */
+nav a {
+    display: inline-block; /* Cambiado a inline-block para controlar el ancho */
+    width: 150px; /* Ancho fijo para todos los enlaces */
+    color: #fff;
+    padding: 15px;
+    text-align: center; /* Centrar el texto */
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+nav a:hover {
+    background-color: #7b1fa2;
+    border-radius: 5px;
+    transform: scale(1.05);
+}
+
+/* Estilos de la cuadrícula para las imágenes */
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); 
+    gap: 20px; 
+    width: 80%; 
+    margin-top: 20px; /* Espacio encima de la cuadrícula */
+}
+
+.grid-item {
+    background-color: #4CAF50;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    border-radius: 10px;
+    overflow: hidden; 
+}
+
+.grid-item img {
+    width: 100%; /* Ocupa el 100% del ancho del cuadro */
+    height: auto; /* Mantiene la proporción de la imagen */
+    max-width: 225px; /* Limita el ancho máximo a 225px */
+    border-radius: 8px; /* Bordes redondeados para las imágenes */
+    transition: transform 0.3s ease; 
+}
+
+.grid-item img:hover {
+    transform: scale(1.1); 
+}
+
+.grid-item p {
+    margin-top: 10px;
+    font-size: 1.2em;
+}
+
+/* Responsividad: Ajustes en dispositivos pequeños */
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: row; /* Mantiene los enlaces en fila */
+        justify-content: space-between; /* Distribuye los enlaces de forma más equitativa */
+    }
+
+    nav a {
+        padding: 12px 10px;
+        font-size: 0.9em;
+    }
+}

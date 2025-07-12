@@ -1,0 +1,209 @@
+/* Tipografía y color base */
+body {
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+    background-color: #f0f4f8;
+    color: #333;
+}
+
+/* Menú de navegación */
+nav {
+    position: fixed; /* Se fija en la parte superior */
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #4a148c;
+    display: flex;
+    justify-content: center;
+    padding: 10px 0;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+nav:hover {
+    background-color: #6a1b9a;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    padding: 0;
+}
+
+nav ul li {
+    margin: 0;
+}
+
+nav a {
+    display: inline-block;
+    width: 150px;
+    color: #fff;
+    padding: 15px;
+    text-align: center;
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+nav a:hover {
+    background-color: #7b1fa2;
+    border-radius: 5px;
+    transform: scale(1.05);
+}
+
+/* Ajuste dinámico para el contenido */
+main {
+    margin-top: 70px; /* Espacio suficiente para que no se superponga con el menú */
+    padding: 50px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+}
+
+/* Estilos para el encabezado */
+header {
+    background-color: #6a1b9a;
+    color: #fff;
+    padding: 30px 0;
+    text-align: center;
+    box-shadow: 0 10px 8px rgba(0, 0, 0, 0.2);
+    margin-top: 55px;
+    transition: background-color 0.3s ease;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2.5em;
+}
+
+header p {
+    margin: 10px 0 0;
+    font-size: 1.2em;
+}
+
+/* Contenido */
+.content {
+    max-width: 900px;
+    background-color: #fff;
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    transition: box-shadow 0.3s ease;
+}
+
+.content:hover {
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Tabla de servicios */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+    display: block;
+    overflow-x: auto; /* Permite desplazamiento horizontal en pantallas pequeñas */
+    transition: background-color 0.3s ease;
+}
+
+table th,
+table td {
+    padding: 15px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+table th {
+    background-color: #6a1b9a;
+    color: white;
+}
+
+table tr:hover {
+    background-color: #f1f1f1;
+}
+
+/* Galería de imágenes */
+.gallery {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    transition: opacity 0.3s ease;
+}
+
+.image-container {
+    text-align: center;
+    flex: 1;
+}
+
+.image-container img {
+    width: 100%;
+    max-width: 300px;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease;
+}
+
+.image-container img:hover {
+    transform: scale(1.05);
+}
+
+.image-container p {
+    margin-top: 10px;
+    font-size: 0.9em;
+    color: #555;
+}
+
+/* Pie de página */
+footer {
+    background-color: #4a148c;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+    box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.1);
+    position: relative;
+    transition: background-color 0.3s ease;
+}
+
+footer p {
+    margin: 0;
+    font-size: 1em;
+}
+
+/* Responsividad */
+@media (max-width: 768px) {
+    .gallery {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav ul li {
+        margin-bottom: 10px;
+    }
+
+    nav a {
+        width: auto;
+        padding: 10px 15px;
+    }
+
+    main {
+        margin-top: 100px; /* Ajusta el margen para pantallas más pequeñas */
+    }
+
+    header h1 {
+        font-size: 2em;
+    }
+
+    .content {
+        padding: 20px;
+    }
+}
